@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block title %}
+Додати товар
+{% endblock %}
+
+{% block content %}
+
+<h2>Додати новий товар</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <p>
+        <label for="name">Назва:</label>
+        <input type="text" id="name" name="name" required>
+    </p>
+
+    <p>
+        <label for="brand">Бренд:</label>
+        <input type="text" id="brand" name="brand" required>
+    </p>
+
+    <p>
+        <label for="size">Розмір:</label>
+        <input type="text" id="size" name="size" required>
+    </p>
+
+    <p>
+        <label for="color">Колір:</label>
+        <input type="text" id="color" name="color" required>
+    </p>
+
+    <p>
+        <label for="price">Ціна:</label>
+        <input type="number" id="price" name="price" step="0.01" min="0" required>
+    </p>
+
+    <button type="submit">Додати товар</button>
+</form>
+
+{% endblock %}
+</body>
+</html>
