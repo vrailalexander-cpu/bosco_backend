@@ -5,10 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+{% load catalog_extras %}
 <nav>
     <a href="/">Головна</a>
     <a href="/products/">Товари</a>
     <a href="/about/">Про нас</a>
+
+    <span>
+        Товарів у базі: {% catalog_count %}
+    </span>
 </nav>
 </body>
 </html>
