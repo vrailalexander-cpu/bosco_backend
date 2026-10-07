@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include 'partials/menu.html' %}
 
     <title>
         {% block title %}Мій Django сайт{% endblock %}
     </title>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'catalog/css/style.css' %}">
 </head>
 
 <body>
-
     <header>
-        <h1>Мій Django сайт</h1>
+        {% include 'partials/menu.html' %}
     </header>
 
     <main>
